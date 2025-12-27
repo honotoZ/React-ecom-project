@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cart{
+    border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.cart2{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 5px;
+}
+.cart2 img{
+    width: 20%;
+    margin-bottom: 5px;
+}
+.cart2 p{
+    text-align: justify;
+    font-family: sans-serif;
+    overflow: hidden;
+}
