@@ -6,13 +6,13 @@ import { GoDash } from "react-icons/go";
 function Hero() {
     return (
         <>
-            <div className='container flex m-auto justify-between items-center border'>
+            <div className='container flex m-auto justify-between items-center border border-black border-opacity-40'>
                 <div className='m-auto'>
                     <div className='flex items-center'><GoDash className='text-6xl'/> OUR BEST SELLERS</div>
                     <div className='font-900 text-3xl'>LATEST ARRIVALS</div> 
                     <div className='flex items-center font-800'>SHOP NOW <GoDash className='text-6xl'/></div>
                 </div>
-                <div className='hero2'>
+                <div>
                     <img className='w-xl' src="https://euphonious-sunflower-40cfe9.netlify.app/assets/hero_img-DOCOb6wn.png" alt="" />
                 </div>
             </div>

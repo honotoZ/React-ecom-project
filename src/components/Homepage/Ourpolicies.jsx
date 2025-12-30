@@ -30,7 +30,7 @@ function Ourpolicies() {
                     <p className='opacity-50 p-2'>Don't miss out—unlock your savings now by subscribing below!</p>
                     <div className='pt-8'>
                         <input type="text" placeholder='hello@gmail.com' className='w-lg h-12 p-2 outline-none'/>
-                        <button className='font-sans font-medium bg-black text-white p-3 font-sans text-base'>SUBSCRIBE</button>
+                        <button className='font-sans font-medium bg-black text-xs text-white px-9 py-4 font-sans text-base cursor-pointer'>SUBSCRIBE</button>
                     </div>
                 </div>
             </div>

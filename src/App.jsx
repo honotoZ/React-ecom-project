@@ -11,9 +11,9 @@ function App() {
     <>
       <Navbar/>
       <Hero/>
+      <LatestCollection/>
       <Ourpolicies/>
       <Footer/>
-      {/* <LatestCollection/> */}
     </>
   )
 }
