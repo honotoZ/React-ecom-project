@@ -3,13 +3,14 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { FaRegHeart } from "react-icons/fa";
 import { GoBriefcase } from "react-icons/go";
 import { IoPersonOutline } from "react-icons/io5";
+import NavImg from '../../assets/trendifyImg.png'
 
 function Navbar() {
     return (
         <>
             <div className="container flex m-auto justify-between items-center p-3">
                 <div className='navLogo'>
-                    <img src="src/assets/trendifyImg.png" alt="no image" className='w-50 cursor-pointer'/>
+                    <img src={NavImg} alt="no image" className='w-50 cursor-pointer'/>
                 </div>
                 <div className='navLinks flex gap-4 items-center'>
                     <div className='cursor-pointer'>HOME</div>
