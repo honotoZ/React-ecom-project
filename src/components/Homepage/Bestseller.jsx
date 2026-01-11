@@ -1,19 +1,8 @@
 import React from 'react'
 import LatestCollection from './LatestCollection'
-import { useState, useCallback } from 'react'
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-
-function Bestseller() {
-    const[data,setData]=useState([])
-    
-    const fetchApi=useCallback(async()=>{
-        const res=await fetch("https://fakestoreapi.com/products")
-        const response=await res.json()
-        setData(response)
-    },[])
-    fetchApi()
-
+import ProductsContainer from './ProductsContainer';
+function Bestseller({data}) {    
     return (
         <>
             <div className='container mx-auto my-22'>
@@ -27,18 +16,10 @@ function Bestseller() {
                 </div>
                 <div className='flex flex-wrap justify-center gap-5'>
                     {
-                        data.map((element,index)=>(
-                            <div className='relative container flex flex-col w-60' key={index}>
-                                <div className="absolute top-2 right-2 z-10 cursor-pointer">
-                                    <AiOutlineHeart className="text-3xl text-red-600 hover:text-blue-500 transition-colors" />
-                                </div>
-                                <img src={element.image} alt="" className='cartImg w-full h-70 object-cover mx-auto cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105'/>
-                                <p className='font-sans opacity-60'>{element.title}</p>
-                                <p className='font-sans opacity-70'>{element.price}</p>
-                            </div>
-                        ))
+                        <ProductsContainer data={data} start={0} end={5}/>
                     }
                 </div>
+               
             </div>
         </>
     )
