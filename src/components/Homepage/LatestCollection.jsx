@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState, useEffect } from 'react'
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { FaRegHeart } from "react-icons/fa6";
 
 function LatestCollection() {
     const[data,setData]=useState([])
@@ -10,7 +10,9 @@ function LatestCollection() {
         const response=await res.json()
         setData(response)
     },[])
-    fetchApi()
+    useEffect(()=> {
+        fetchApi()
+    },[])
 
     return (
         <>
@@ -28,9 +30,9 @@ function LatestCollection() {
                         data.map((element,index)=>(
                             <div className='relative container flex flex-col w-60' key={index}>
                                 <div className="absolute top-2 right-2 z-10 cursor-pointer">
-                                    <AiOutlineHeart className="text-3xl text-red-600 hover:text-blue-500 transition-colors" />
+                                    <FaRegHeart className='text-red-500 text-2xl' />
                                 </div>
-                                <img src={element.image} alt="" className='cartImg w-full h-70 object-cover mx-auto cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105'/>
+                                <img src={element.image} alt="" className='w-50 h-55 cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105'/>
                                 <p className='font-sans opacity-60'>{element.title}</p>
                                 <p className='font-sans opacity-70'>{element.price}</p>
                             </div>
