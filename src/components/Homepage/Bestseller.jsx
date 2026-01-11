@@ -1,9 +1,8 @@
+import React from 'react'
+import LatestCollection from './LatestCollection'
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa6";
-import ProductContainer from "./ProductContainer";
-
-function Bestseller({data}) {
-    
+import ProductsContainer from './ProductsContainer';
+function Bestseller({data}) {    
     return (
         <>
             <div className='container mx-auto my-22'>
@@ -17,9 +16,10 @@ function Bestseller({data}) {
                 </div>
                 <div className='flex flex-wrap justify-center gap-5'>
                     {
-                        <ProductContainer data={data} start={0} end={5}/>
+                        <ProductsContainer data={data} start={0} end={5}/>
                     }
                 </div>
+               
             </div>
         </>
     )

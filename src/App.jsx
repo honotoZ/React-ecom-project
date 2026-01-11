@@ -5,18 +5,19 @@ import Hero from './components/Homepage/Hero';
 import Footer from './components/Pages/Footer';
 import Ourpolicies from './components/Homepage/Ourpolicies';
 import Bestseller from './components/Homepage/Bestseller';
-import { useCallback, useState, useEffect } from 'react'
-
+import { useCallback, useEffect, useState } from 'react';
 function App() {
-  const[data,setData]=useState([])
-    const fetchApi=useCallback(async()=>{
-        const res=await fetch("https://fakestoreapi.com/products")
-        const response=await res.json()
-        setData(response)
-    },[])
-    useEffect(()=> {
+      const[data,setData]=useState([])
+      
+      const fetchApi=useCallback(async()=>{
+          const res=await fetch("https://696375582d146d9f58d38609.mockapi.io/products")
+          const response=await res.json()
+          setData(response)
+      },[])
+      useEffect(()=>{
         fetchApi()
-    },[])
+      },[])
+  
 
   return (
     <>

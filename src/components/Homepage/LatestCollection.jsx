@@ -1,9 +1,6 @@
 import { MdOutlineHorizontalRule } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa6";
-import ProductContainer from "./ProductContainer";
-
+import ProductsContainer from './ProductsContainer';
 function LatestCollection({data}) {
-    
     return (
         <>
             <div className='container mx-auto my-22'>
@@ -17,7 +14,7 @@ function LatestCollection({data}) {
                 </div>
                 <div className='flex flex-wrap justify-center gap-5'>
                     {
-                        <ProductContainer data={data} start={0} end={data.length}/>
+                        <ProductsContainer data={data} start={0} end={10}/>
                     }
                 </div>
             </div>
