@@ -10,8 +10,9 @@ function App() {
       const[data,setData]=useState([])
       
       const fetchApi=useCallback(async()=>{
-          const res=await fetch("https://696375582d146d9f58d38609.mockapi.io/products")
+          const res=await fetch("https://67cbf5463395520e6af6bea3.mockapi.io/Products")
           const response=await res.json()
+          console.log(response)
           setData(response)
       },[])
       useEffect(()=>{

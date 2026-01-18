@@ -1,5 +1,3 @@
-import React from 'react'
-import LatestCollection from './LatestCollection'
 import { MdOutlineHorizontalRule } from "react-icons/md";
 import ProductsContainer from './ProductsContainer';
 function Bestseller({data}) {    
@@ -19,7 +17,6 @@ function Bestseller({data}) {
                         <ProductsContainer data={data} start={0} end={5}/>
                     }
                 </div>
-               
             </div>
         </>
     )

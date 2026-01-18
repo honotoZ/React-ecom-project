@@ -8,7 +8,7 @@ import NavImg from '../../assets/trendifyImg.png'
 function Navbar() {
     return (
         <>
-            <div className="container flex m-auto justify-between items-center p-3">
+            <div className="container flex m-auto justify-between items-center p-3 sticky top-0 z-50 bg-white">
                 <div className='navLogo'>
                     <img src={NavImg} alt="no image" className='w-50 cursor-pointer'/>
                 </div>
