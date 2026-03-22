@@ -1,26 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { FaRegHeart } from "react-icons/fa";
 import { GoBriefcase } from "react-icons/go";
 import { IoPersonOutline } from "react-icons/io5";
 import NavImg from '../../assets/trendifyImg.png'
+import CartContext from '../Context/Utils/CartContext';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
+    const {cartItems,setCartItems}=useContext(CartContext)
     return (
         <>
-            <div className="container flex m-auto justify-between items-center p-3 sticky top-0 z-50 bg-white">
+            <div className="w-[84%] flex m-auto justify-between items-center sticky top-0 z-50 bg-white p-3">
                 <div className='navLogo'>
-                    <img src={NavImg} alt="no image" className='w-50 cursor-pointer'/>
+                    <img src={NavImg} alt="no image" className='w-45 cursor-pointer'/>
                 </div>
                 <div className='navLinks flex gap-4 items-center'>
-                    <div className='cursor-pointer'>HOME</div>
-                    <div className='cursor-pointer'>COLLECTION</div>
-                    <div className='cursor-pointer'>ABOUT</div>
-                    <div className='cursor-pointer'>CONTACT</div>
+                    <Link to='/' className='cursor-pointer'>HOME</Link>
+                    <Link to='/collection' className='cursor-pointer'>COLLECTION</Link>
+                    <Link to='/about' className='cursor-pointer'>ABOUT</Link>
+                    <Link to='/contact' className='cursor-pointer'>CONTACT</Link>
                 </div>
-                <div className='navIcons flex gap-4 items-center text-3xl'>
+                <div className='relative flex justify-evenly text-[1.68rem] py-1 gap-4 min-w-[170px]'>
                     <HiMagnifyingGlass className='cursor-pointer'/>
-                    <FaRegHeart className='cursor-pointer'/>
+                    <FaRegHeart className='cursor-pointer' />
+                    <span className='bg-red-500 text-white rounded-full 
+                    text-sm text-center absolute right-22 top-4 w-5'>
+                        {cartItems?.length}
+                    </span>
                     <GoBriefcase className='cursor-pointer'/>
                     <IoPersonOutline className='cursor-pointer'/>
                 </div>

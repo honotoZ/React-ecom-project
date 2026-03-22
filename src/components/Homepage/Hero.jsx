@@ -6,7 +6,7 @@ import { GoDash } from "react-icons/go";
 function Hero() {
     return (
         <>
-            <div className='container flex m-auto justify-between items-center border border-black border-opacity-40'>
+            <div className='w-[84%] flex m-auto justify-between items-center border border-black border-opacity-40'>
                 <div className='m-auto'>
                     <div className='flex items-center'><GoDash className='text-6xl'/> OUR BEST SELLERS</div>
                     <div className='font-900 text-3xl'>LATEST ARRIVALS</div> 

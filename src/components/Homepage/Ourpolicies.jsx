@@ -7,7 +7,7 @@ import { FiHeadphones } from "react-icons/fi";
 function Ourpolicies() {
     return (
         <>
-            <div className='container m-auto flex flex-col mt-26 mb-40'>
+            <div className='w-[84%] m-auto flex flex-col mt-26 mb-40'>
                 <div className='flex w-full justify-around py-10'>
                     <div className='flex flex-col items-center gap-3'>
                         <TfiReload className='text-5xl'/>

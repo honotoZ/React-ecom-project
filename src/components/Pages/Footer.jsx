@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <>
-            <div className='container m-auto'>
+            <div className='w-[84%] m-auto'>
                 <div className='flex justify-between'>
                     <div className='w-3xl p-2'>
                         <div className='mb-4'>

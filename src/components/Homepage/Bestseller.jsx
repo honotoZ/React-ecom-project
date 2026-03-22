@@ -1,9 +1,10 @@
 import { MdOutlineHorizontalRule } from "react-icons/md";
 import ProductsContainer from './ProductsContainer';
-function Bestseller({data}) {    
+
+function Bestseller() {    
     return (
         <>
-            <div className='container mx-auto my-22'>
+            <div className='w-[84%] mx-auto my-22'>
                 <div className='flex flex-col items-center p-6 gap-3'>
                     <h2 className='flex items-center gap-2 text-4xl font-bold'>
                         <span className='opacity-40'>BEST</span>
@@ -14,7 +15,7 @@ function Bestseller({data}) {
                 </div>
                 <div className='flex flex-wrap justify-center gap-5'>
                     {
-                        <ProductsContainer data={data} start={0} end={5}/>
+                        <ProductsContainer start={0} end={5}/>
                     }
                 </div>
             </div>
