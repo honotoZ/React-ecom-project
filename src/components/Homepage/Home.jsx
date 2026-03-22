@@ -5,6 +5,7 @@ import LatestCollection from './LatestCollection'
 import Bestseller from './Bestseller'
 import Ourpolicies from './Ourpolicies'
 import Footer from '../Pages/Footer'
+import Subscribe from './Subscribe'
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <LatestCollection/>
             <Bestseller/>
             <Ourpolicies/>
+            <Subscribe/>
         </>
     )
 }

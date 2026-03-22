@@ -4,7 +4,7 @@ import ProductsContainer from './ProductsContainer';
 function Bestseller() {    
     return (
         <>
-            <div className='w-[84%] mx-auto my-22'>
+            <div className='w-[84%] mx-auto my-10'>
                 <div className='flex flex-col items-center p-6 gap-3'>
                     <h2 className='flex items-center gap-2 text-4xl font-bold'>
                         <span className='opacity-40'>BEST</span>

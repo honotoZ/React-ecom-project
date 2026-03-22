@@ -11,7 +11,8 @@ function Navbar() {
     const {cartItems,setCartItems}=useContext(CartContext)
     return (
         <>
-            <div className="w-[84%] flex m-auto justify-between items-center sticky top-0 z-50 bg-white p-3">
+            <div className="w-[84%] flex m-auto justify-between items-center sticky top-0 z-50 bg-white 
+            p-3 border-x border-gray-200 border-b-2 border-b-gray-300">
                 <div className='navLogo'>
                     <img src={NavImg} alt="no image" className='w-45 cursor-pointer'/>
                 </div>
