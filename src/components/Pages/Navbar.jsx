@@ -24,10 +24,12 @@ function Navbar() {
                 <div className='relative flex justify-evenly text-[1.68rem] py-1 gap-4 min-w-[170px]'>
                     <HiMagnifyingGlass className='cursor-pointer'/>
                     <FaRegHeart className='cursor-pointer' />
-                    <span className='bg-red-500 text-white rounded-full 
-                    text-sm text-center absolute right-22 top-4 w-5'>
+                    {cartItems.length > 0 &&(
+                    <span className='bg-red-500 text-white rounded-full flex items-center justify-center
+                    text-xs text-sm text-center absolute right-22 top-4 w-[1.1rem] h-[1.1rem]'>
                         {cartItems?.length}
                     </span>
+                    )}
                     <GoBriefcase className='cursor-pointer'/>
                     <IoPersonOutline className='cursor-pointer'/>
                 </div>

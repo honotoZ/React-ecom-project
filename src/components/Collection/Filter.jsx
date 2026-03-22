@@ -39,7 +39,9 @@ function Filter() {
                         </div>
                     </div>
                 </div>
-                <div className='border-none p-2 w-30 bg-black text-center text-white rounded-md'>Clear Filters</div>
+                <div className='border-none p-2 w-30 bg-black text-center text-white rounded-md'>
+                Clear Filters
+                </div>
             </div>
         </>
     )

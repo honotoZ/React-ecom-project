@@ -9,15 +9,15 @@ function AllCollection() {
         <>
             <div className='flex justify-between mb-2'>
                 <div className='flex items-center'>
-                    <span className='text-2xl font-sans text-gray-500 font-semibold'>ALL</span>&nbsp;
-                    <span className='text-2xl font-sans text-gray-800 font-semibold'>COLLECTIONS</span>
-                    <div className='sm:w-15 h-[2.19px] bg-gray-700 ml-3'></div>
+                    <span className='text-2xl font-sans text-gray-400 font-semibold'>ALL</span>&nbsp;
+                    <span className='text-2xl font-sans text-gray-600 font-semibold'>COLLECTIONS</span>
+                    <div className='sm:w-15 h-[2.19px] bg-gray-600 ml-3'></div>
                 </div>
                 <div className='border-2 border-gray-300'>
-                    <select name="" id="" className='p-3'>
-                        <option value="">Sort by: Relevant</option>
-                        <option value="">Sort by: Low to High</option>
-                        <option value="">Sort by: High to Low</option>
+                    <select className='p-2'>
+                        <option value="relevant">Sort by: Relevant</option>
+                        <option value="low">Sort by: Low to High</option>
+                        <option value="high">Sort by: High to Low</option>
                     </select>
                 </div>
             </div>
