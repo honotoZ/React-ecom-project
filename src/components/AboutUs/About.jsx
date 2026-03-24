@@ -13,8 +13,8 @@ function About() {
             </div>
             <div className='w-[84%] flex flex-col md:flex-row items-stretch gap-10 mx-auto mt-4'>
                 <div className='w-[28rem] md:w-[28rem] md:h-[35rem] flex-shrink-0'>
-                    <img 
-                    src={AboutImg} 
+                    <img
+                    src={AboutImg}
                     alt="no image"
                     className='w-full h-full object-cover'/>
                 </div>

@@ -21,8 +21,8 @@ function AllCollection() {
                     </select>
                 </div>
             </div>
-            <div className='w-full'>
-                <ProductsContainer start={0} end={8}/>
+            <div>
+                <ProductsContainer start={0} end={8} cols={4}/>
             </div>
         </>
     )

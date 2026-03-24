@@ -3,7 +3,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import ProductsContext from "../Context/Utils/ProductsContext";
 import CartContext from "../Context/Utils/CartContext";
 
-const ProductsContainer = ({start,end}) => {
+const ProductsContainer = ({start,end, cols=5}) => {
     console.log(start,end)
     const{cartItems,setCartItems,addToCart,removeFromCart}=useContext(CartContext)
     const {productsData,loading,error,fetchProducts}=useContext(ProductsContext)
@@ -19,6 +19,12 @@ const ProductsContainer = ({start,end}) => {
     useEffect(()=>{
         fetchProducts()
     },[])
+    const gridCols = {
+        2: "grid-cols-2",
+        3: "grid-cols-3",
+        4: "grid-cols-4",
+        5: "grid-cols-5"
+    };
     
     return (
     <>
@@ -27,12 +33,12 @@ const ProductsContainer = ({start,end}) => {
                 Loading
             </div>
         ):(
-            <div className='flex flex-wrap justify-between gap-3'>
+            <div className={`grid ${gridCols[cols]} gap-x-4 gap-y-6`}>
                 {productsData.slice(start,end).map((product,index)=>{
                     const isInCart = cartItems.some((item)=> product._id === item._id);
 
                     return(
-                        <div className='relative flex flex-col w-50 h-80' key={index}>
+                        <div className='relative flex flex-col w-full' key={index}>
                             <div className="absolute top-2 right-2 z-10 cursor-pointer">
                                 <span onClick={()=>handleCartClick(product)}>
                                     {!isInCart ? (
@@ -45,10 +51,10 @@ const ProductsContainer = ({start,end}) => {
                             <div className="overflow-hidden">
                                 <img src={product.image[0]} 
                                 alt="" 
-                                className='w-full h-full object-cover cursor-pointer transition-transform 
+                                className='w-full object-cover cursor-pointer transition-transform 
                                 duration-200 ease-in-out hover:scale-120'/>
                             </div>
-                                <p className='font-sans opacity-80 text-sm'>{product.name}</p>
+                                <p className='font-sans opacity-80 text-sm pt-4'>{product.name}</p>
                                 <p className='font-sans opacity-85'>{product.price.toFixed(2)}</p>
                         </div>
                     );
