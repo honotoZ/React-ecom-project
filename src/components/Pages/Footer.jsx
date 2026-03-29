@@ -3,10 +3,10 @@ import React from 'react'
 function Footer() {
     return (
         <>
-            <div className='w-[84%] m-auto'>
+            <div className='w-[84%] m-auto mt-40'>
                 <div className='flex justify-between'>
                     <div className='w-2xl'>
-                        <img src="src/assets/trendifyImg.png" alt="" className='w-37 mb-4 cursor-pointer'/>
+                        <img src="src/assets/trendifyImg.png" alt="" className='w-[21%] mb-4 cursor-pointer'/>
                         <div className='w-[70%] text-sm opacity-70'>Thank you for shopping with Trendify! We're dedicated to bringing you the 
                         latest trends and top-quality products. Follow us on social media for updates on 
                         new arrivals, exclusive offers, and more. If you have any questions or need 
@@ -16,7 +16,7 @@ function Footer() {
                     </div>
                     <div className='w-50'>
                         <div className='font-semibold text-xl mb-5'>COMPANY</div>
-                        <div className='text-sm opacity-70 flex flex-col gap-2'>
+                        <div className='text-sm text-gray-600 flex flex-col gap-2'>
                             <div className='cursor-pointer'>Home</div>
                             <div className='cursor-pointer'>About Us</div>
                             <div className='cursor-pointer'>Delivery</div>
@@ -26,8 +26,8 @@ function Footer() {
                     <div className='w-50'>
                         <div className='font-semibold text-xl mb-5'>GET IN TOUCH</div>
                         <div className='flex flex-col gap-2'>
-                            <div className='text-sm opacity-70'>+11-558-669-447</div>
-                            <div className='text-sm opacity-70'>contact.trendify@info.com</div>
+                            <div className='text-sm text-gray-600'>+11-558-669-447</div>
+                            <div className='text-sm text-gray-600'>contact.trendify@info.com</div>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import Pagination from './Pagination'
 function Collection() {
     return (
         <>
-            <div className='w-[84%] flex m-auto gap-5 mt-10 mb-10'>
+            <div className='w-[84%] flex m-auto gap-5 mt-10'>
                     <Filter/>
                 <div>
                     <AllCollection/>
