@@ -11,6 +11,7 @@ import CartProvider from './components/Provider/CartProvider'
 import Collection from './components/Collection/Collection';
 import Home from './components/Homepage/Home';
 import About from './components/AboutUs/About';
+import Contact from './components/Contact/Contact';
 import { Routes,Route } from 'react-router-dom';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/collection' element={<Collection/>}/>
             <Route path='/about' element={<About/>}/>
+            <Route path='/contact' element={<Contact/>}/>
           </Routes>
           <Footer/>
         </CartProvider>

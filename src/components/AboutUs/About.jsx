@@ -6,7 +6,6 @@ import Subscribe from '../Homepage/Subscribe'
 function About() {
     return (
         <>
-            <div>
                 <div className='w-[84%] flex justify-center items-center mx-auto pt-8 pb-4 mb-10'>
                     <span className='text-2xl font-medium text-gray-400 font-semibold'>ABOUT</span>&nbsp;
                     <span className='text-2xl font-medium text-gray-600 font-semibold'>US</span>
@@ -55,7 +54,6 @@ function About() {
                         </div>
                     </div>
                 </div>
-            </div>
             <Choose/>
             <Subscribe/>
         </>
