@@ -7,7 +7,7 @@ import ProductsContainer from '../Homepage/ProductsContainer';
 function AllCollection() {
     return (
         <>
-            <div className='flex justify-between mb-2'>
+            <div className='flex justify-between mb-5'>
                 <div className='flex items-center'>
                     <span className='text-2xl font-sans text-gray-400 font-semibold'>ALL</span>&nbsp;
                     <span className='text-2xl font-sans text-gray-600 font-semibold'>COLLECTIONS</span>

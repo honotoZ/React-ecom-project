@@ -5,8 +5,8 @@ function Filter() {
         <>
             <div className='flex flex-col w-2/5 gap-6 mt-2'>
                 <div className='text-xl font-medium font-sans'>FILTERS</div>
-                <div className='border-2 flex-col border-gray-300 p-4'>
-                    <div>
+                <div className='border border-gray-300'>
+                    <div className='flex flex-col gap-2 p-6'>
                         <h2 className='text-black font-semibold'>CATEGORIES</h2>
                         <div>
                             <input type="checkbox" className='mr-2'/>
@@ -22,8 +22,8 @@ function Filter() {
                         </div>
                     </div>
                 </div>
-                <div className='border-2 border-gray-300 p-4'>
-                    <div>
+                <div className='border border-gray-300'>
+                    <div className='flex flex-col gap-2 p-6'>
                         <h2 className='text-black font-semibold'>TYPES</h2>
                         <div>
                             <input type="checkbox" className='mr-2'/>
