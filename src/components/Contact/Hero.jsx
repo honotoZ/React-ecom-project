@@ -1,12 +1,11 @@
 import React from 'react'
-import ContactImg from '../../assets/contact_img-CyOum2vk.png'
 import Subscribe from '../Homepage/Subscribe';
 
 function Hero() {
     return (
         <>
             <div className='w-[84%] mx-auto mb-8 flex justify-between'>
-                <img src={ContactImg} alt="No Image" className='w-[39%]' />
+                <img src="/assets/contact_img.png" alt="No Image" className='w-[39%]' />
                 <div className='w-[57%] flex flex-col justify-center gap-6'>
                     <h2 className='w-[15%] text-xl font-bold opacity-70'>Our Store</h2>
                     <p className='w-[31%] opacity-60'>Trendify 354 Fashion Lane 

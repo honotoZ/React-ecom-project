@@ -3,7 +3,6 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { FaRegHeart } from "react-icons/fa";
 import { GoBriefcase } from "react-icons/go";
 import { IoPersonOutline } from "react-icons/io5";
-import NavImg from '../../assets/trendifyImg.png'
 import CartContext from '../Context/Utils/CartContext';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ function Navbar() {
             <div className="w-[84%] flex m-auto justify-between items-center sticky top-0 z-50 bg-white 
             p-3 border-x border-gray-200 border-b-2 border-b-gray-300">
                 <div className='navLogo'>
-                    <img src={NavImg} alt="no image" className='w-45 cursor-pointer'/>
+                    <img src="/assets/trendifyImg.png" alt="no image" className='w-45 cursor-pointer'/>
                 </div>
                 <div className='navLinks flex gap-4 items-center'>
                     <Link to='/' className='cursor-pointer'>HOME</Link>

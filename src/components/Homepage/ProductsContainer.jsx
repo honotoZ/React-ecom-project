@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import ProductsContext from "../Context/Utils/ProductsContext";
 import CartContext from "../Context/Utils/CartContext";
+import { Link } from "react-router-dom";
 
 const ProductsContainer = ({start,end, cols=5}) => {
     console.log(start,end)
@@ -36,7 +37,6 @@ const ProductsContainer = ({start,end, cols=5}) => {
             <div className={`grid ${gridCols[cols]} gap-x-4 gap-y-6`}>
                 {productsData.slice(start,end).map((product,index)=>{
                     const isInCart = cartItems.some((item)=> product._id === item._id);
-
                     return(
                         <div className='relative flex flex-col w-full' key={index}>
                             <div className="absolute top-2 right-2 z-10 cursor-pointer">
@@ -49,10 +49,12 @@ const ProductsContainer = ({start,end, cols=5}) => {
                                 </span>
                             </div>
                             <div className="overflow-hidden">
-                                <img src={product.image[0]} 
-                                alt="" 
-                                className='w-full object-cover cursor-pointer transition-transform 
-                                duration-200 ease-in-out hover:scale-120'/>
+                                <Link to={`/cartImg/${product.id}`}>
+                                    <img src={product.image[0]} 
+                                    alt="" 
+                                    className='w-full object-cover cursor-pointer transition-transform 
+                                    duration-200 ease-in-out hover:scale-120'/>
+                                </Link>
                             </div>
                                 <p className='font-sans opacity-80 text-sm pt-4'>{product.name}</p>
                                 <p className='font-sans opacity-85'>{product.price.toFixed(2)}</p>

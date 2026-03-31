@@ -12,6 +12,8 @@ import Collection from './components/Collection/Collection';
 import Home from './components/Homepage/Home';
 import About from './components/AboutUs/About';
 import Contact from './components/Contact/Contact';
+import CartImg from './components/CartImages/CartImg';
+import CartDetails from './components/CartImages/CartDetails';
 import { Routes,Route } from 'react-router-dom';
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
             <Route path='/collection' element={<Collection/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/contact' element={<Contact/>}/>
+            <Route path='/cartImg/:id' element={<CartImg/>}/>
+            <Route path='/cartDetails' element={<CartDetails/>}/>
           </Routes>
           <Footer/>
         </CartProvider>
