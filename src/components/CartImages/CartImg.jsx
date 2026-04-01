@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { FaRegStar } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useParams } from 'react-router-dom';
 import Review from './Review';
+import RelatedProducts from './RelatedProducts';
 
 function CartImg() {
     const [data,setData]=useState({});
@@ -10,6 +12,7 @@ function CartImg() {
     const {id}=useParams();
 
     useEffect(()=>{
+        setData({});
         const fetchCart=async()=>{
         setLoading(true);
             try{
@@ -30,9 +33,14 @@ function CartImg() {
         <>
             <div className='w-[84%] mx-auto pt-10 flex justify-between'>
                 <div className='w-[9%] h-[5%] flex flex-col gap-3'>
-                    {/* {data?.image?.map((img, index) => (
-                    <img key={index} src={img} alt="" />
-                    ))} */}
+                {/* {data?.image?.map((img, index) => (
+                    <img 
+                        key={index} 
+                        src={img} 
+                        alt="" 
+                        className='cursor-pointer border-2 border-black p-3'
+                    />
+                ))} */}
                     <img src={data?.image?.[0]} alt="" className='border-2 border-black p-3 cursor-pointer'/>
                     <img src={data?.image?.[1]} alt="" className='cursor-pointer'/>
                     <img src={data?.image?.[2]} alt="" className='cursor-pointer'/>
@@ -43,16 +51,21 @@ function CartImg() {
                 </div>
                 <div className='w-[50%] flex flex-col justify-between pt-2'>
                     <h2 className='font-semibold text-2xl'>{data.name}</h2>
-                    <div className='flex text-xl'>
-                        <FaRegStar/><FaRegStar/><FaRegStar/><FaRegStar/>
+                    <div className='flex text-md text-yellow-500 flex items-center gap-1'>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span className='text-black text-lg'>(0)</span>
                     </div>
                     <h2 className='font-semibold text-3xl'>{`$${data.price}`}</h2>
                     <p className='text-gray-500'>{data.description}</p>
                     <p className='font-medium'>Select Size</p>
-                    <div className='flex gap-1'>
-                        <span className='py-2 px-4 text-lg font-medium border border-gray-300 shadow-lg cursor-pointer'>{data?.sizes?.[0]}</span>
-                        <span className='py-2 px-4 text-lg font-medium border border-gray-300 shadow-lg cursor-pointer'>{data?.sizes?.[1]}</span>
-                        <span className='py-2 px-4 text-lg font-medium border border-gray-300 shadow-lg cursor-pointer'>{data?.sizes?.[2]}</span>
+                    <div className='flex gap-2'>
+                        <span className='py-2 px-4 w-12 text-md font-medium border border-gray-300 shadow-lg cursor-pointer'>{data?.sizes?.[0]}</span>
+                        <span className='py-2 px-4 w-12 text-md font-medium border border-gray-300 shadow-lg cursor-pointer'>{data?.sizes?.[1]}</span>
+                        <span className='py-2 px-4 w-12 text-md font-medium border border-gray-300 shadow-lg cursor-pointer'>{data?.sizes?.[2]}</span>
                     </div>
                     <button className='w-[25%] bg-black text-white px-5 py-3 cursor-pointer'>ADD TO CART</button>
                     <p className='text-gray-500'>Guaranteed 100% Authentic – Shop with Confidence!
@@ -61,6 +74,7 @@ function CartImg() {
                 </div>
             </div>
             <Review/>
+            <RelatedProducts category={data.category} />
         </>
     )
 }

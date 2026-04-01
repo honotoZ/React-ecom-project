@@ -6,9 +6,9 @@ import RelatedProducts from './RelatedProducts'
 function CartDetails() {
     return (
         <>
-            <CartImg/>
-            <Review/>
-            <RelatedProducts/>
+            {/* <CartImg/> */}
+            {/* <Review/> */}
+            {/* <RelatedProducts/> */}
         </>
     )
 }

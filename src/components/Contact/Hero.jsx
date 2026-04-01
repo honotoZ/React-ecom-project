@@ -4,7 +4,7 @@ import Subscribe from '../Homepage/Subscribe';
 function Hero() {
     return (
         <>
-            <div className='w-[84%] mx-auto mb-8 flex justify-between'>
+            <div className='w-[84%] mx-auto mb-30 flex justify-between'>
                 <img src="/assets/contact_img.png" alt="No Image" className='w-[39%]' />
                 <div className='w-[57%] flex flex-col justify-center gap-6'>
                     <h2 className='w-[15%] text-xl font-bold opacity-70'>Our Store</h2>
@@ -18,7 +18,8 @@ function Hero() {
                     Join us at Trendify! Explore job openings and help shape the future of fashion.
                     Explore our current job openings and discover how you can contribute to our mission of setting trends and creating style.
                     </p>
-                    <button className='w-[20%] text-sm border py-4 cursor-pointer hover:bg-gray-800 hover:text-white'>Explore Jobs</button>
+                    <button className='w-[20%] text-sm border py-4 cursor-pointer hover:bg-gray-800 
+                    hover:text-white transition-colors duration-500 ease-in-out'>Explore Jobs</button>
                 </div>
             </div>
             <Subscribe/>

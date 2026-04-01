@@ -29,7 +29,7 @@ function App() {
             <Route path='/about' element={<About/>}/>
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/cartImg/:id' element={<CartImg/>}/>
-            <Route path='/cartDetails' element={<CartDetails/>}/>
+            {/* <Route path='/cartDetails/:id' element={<CartDetails/>}/> */}
           </Routes>
           <Footer/>
         </CartProvider>

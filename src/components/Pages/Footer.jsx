@@ -3,10 +3,10 @@ import React from 'react'
 function Footer() {
     return (
         <>
-            <div className='w-[84%] m-auto mt-40'>
+            <div className='w-[84%] m-auto mt-30'>
                 <div className='flex justify-between'>
                     <div className='w-2xl'>
-                        <img src="src/assets/trendifyImg.png" alt="" className='w-[21%] mb-4 cursor-pointer'/>
+                        <img src="/assets/trendifyImg.png" alt="" className='w-[21%] mb-4 cursor-pointer'/>
                         <div className='w-[70%] text-sm opacity-70'>Thank you for shopping with Trendify! We're dedicated to bringing you the 
                         latest trends and top-quality products. Follow us on social media for updates on 
                         new arrivals, exclusive offers, and more. If you have any questions or need 
