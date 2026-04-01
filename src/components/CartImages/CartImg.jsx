@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { FaRegStar } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useParams } from 'react-router-dom';
 import Review from './Review';
 import RelatedProducts from './RelatedProducts';
 
-function CartImg() {
+function CartImg({id}) {
     const [data,setData]=useState({});
     const [loading, setLoading]=useState(false);
     const [error,setError]=useState(null);
-    const {id}=useParams();
 
     useEffect(()=>{
         setData({});
@@ -28,6 +24,8 @@ function CartImg() {
         };
         fetchCart();
     },[id])
+
+    if (loading) return <h1>Loading...</h1>;
     
     return (
         <>
@@ -52,11 +50,11 @@ function CartImg() {
                 <div className='w-[50%] flex flex-col justify-between pt-2'>
                     <h2 className='font-semibold text-2xl'>{data.name}</h2>
                     <div className='flex text-md text-yellow-500 flex items-center gap-1'>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
                         <span className='text-black text-lg'>(0)</span>
                     </div>
                     <h2 className='font-semibold text-3xl'>{`$${data.price}`}</h2>
@@ -74,7 +72,7 @@ function CartImg() {
                 </div>
             </div>
             <Review/>
-            <RelatedProducts category={data.category} />
+            {data?.category && <RelatedProducts category={data.category}/>} 
         </>
     )
 }
