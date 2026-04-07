@@ -7,11 +7,10 @@ const CartProvider=({children})=>{
     const addToCart=(product)=>{
         setCartItems([...cartItems,product])
         console.log(cartItems);
-        
     }
-
+    
     const removeFromCart=(product)=>{
-        const filteredItems=cartItems.filter((element)=>(element._id!==product._id))
+        const filteredItems=cartItems.filter((element)=>(element.id!==product.id))
         setCartItems(filteredItems)
         console.log(cartItems);
         

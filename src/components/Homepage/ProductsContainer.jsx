@@ -43,7 +43,7 @@ const ProductsContainer = ({start, end, cols = 5, category}) => {
                     const isInCart = cartItems.some((item)=> product.id === item.id);
                     return(
                         <div className='relative flex flex-col w-full' key={product.id}>
-                            <div className="absolute top-2 right-2 z-10 cursor-pointer">
+                            <div className="absolute top-2 right-1 z-10 cursor-pointer">
                                 <span onClick={()=>handleCartClick(product)}>
                                     {!isInCart ? (
                                         <AiOutlineHeart className="w-7 h-7 text-red-600 hover:text-red-500 transition-colors"/>

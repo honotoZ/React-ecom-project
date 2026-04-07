@@ -5,9 +5,9 @@ function RelatedProducts({ category }) {
     return(
         <>
             <div className='w-[84%] mx-auto mt-20 mb-30'>
-                <div className='flex items-center justify-center gap-2 font-semibold pt-3 pb-5'> 
-                    <span className='text-3xl font-sans text-gray-500 font-semibold'>RELATED</span>
-                    <span className='text-3xl font-sans text-gray-700 font-semibold'>PRODUCTS</span>
+                <div className='flex items-center justify-center gap-2 pt-3 pb-5'> 
+                    <span className='text-3xl font-sans text-gray-500 font-medium'>RELATED</span>
+                    <span className='text-3xl font-sans text-gray-700 font-medium'>PRODUCTS</span>
                     <span className='sm:w-14 h-[2.19px] bg-gray-600 ml-1'></span>
                 </div>
                 <div>
